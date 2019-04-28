@@ -1,0 +1,22 @@
+<h5>
+  {{soru.soruMetni}}
+</h5>
+
+<div *ngIf="soru.soruTipi == 0" >
+  <label *ngFor="let secenek of soru.cevapSecenekleri" >
+    <input name="secenekler" type="radio" >
+    {{secenek.metin}}
+  </label>
+</div>
+<div *ngIf="soru.soruTipi == 1" >
+  <label *ngFor="let secenek of soru.cevapSecenekleri" >
+    <input type="radio" >
+    {{secenek.metin}}
+  </label>
+</div>
+<div *ngIf="soru.soruTipi == 2" >
+  <label *ngFor="let secenek of soru.cevapSecenekleri" >
+    <input name="evetHayir" type="radio" >
+    {{secenek.metin}}
+  </label>
+</div>

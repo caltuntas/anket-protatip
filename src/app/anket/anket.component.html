@@ -1,0 +1,5 @@
+<h1>{{model.baslik}}</h1>
+
+<div *ngFor="let soru of model.sorular" >
+  <app-anket-sorusu [soru]="soru" ></app-anket-sorusu>
+</div>
